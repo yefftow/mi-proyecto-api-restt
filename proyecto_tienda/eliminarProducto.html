@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <style>
+        #productoInfo {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .info-field {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+    
+    <form id="buscarForm">
+        <h2>Buscar Producto</h2>
+        <div>
+            <label for="buscarId">ID del Producto:</label>
+            <input type="number" id="buscarId" required>
+            <button type="button" onclick="buscarProducto()">Buscar</button>
+        </div>
+    </form>
+
+    <div id="productoInfo">
+        <h2>Información del Producto</h2>
+        <div class="info-field"><strong>ID:</strong> <span id="infoId"></span></div>
+        <div class="info-field"><strong>Nombre:</strong> <span id="infoNombre"></span></div>
+        <div class="info-field"><strong>Descripción:</strong> <span id="infoDescripcion"></span></div>
+        <div class="info-field"><strong>Precio:</strong> $<span id="infoPrecio"></span></div>
+        
+        <button onclick="eliminarProducto()">Eliminar Producto</button>
+    </div>
+
+    <script src="./eliminarProducto.js"></script>
+</body>
+</html>
